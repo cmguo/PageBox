@@ -1,7 +1,7 @@
 #ifndef QPROPERTYBINDINGS_H
 #define QPROPERTYBINDINGS_H
 
-#include "TeachingTools_global.h"
+#include "PageBox_global.h"
 
 #include <QObject>
 #include <QList>
@@ -10,7 +10,7 @@
 
 class QPropertyBinding;
 
-class TEACHINGTOOLS_EXPORT QPropertyBindings : public QObject
+class PAGEBOX_EXPORT QPropertyBindings : public QObject
 {
     Q_OBJECT
 public:

@@ -1,7 +1,7 @@
 #ifndef PAGEBOXPLUGIN_H
 #define PAGEBOXPLUGIN_H
 
-#include "TeachingTools_global.h"
+#include "PageBox_global.h"
 
 #include <core/toolbuttonprovider.h>
 
@@ -11,7 +11,7 @@ class QGraphicsItem;
 class PageBoxDocItem;
 class ToolButton;
 
-class TEACHINGTOOLS_EXPORT PageBoxPlugin : public ToolButtonProvider
+class PAGEBOX_EXPORT PageBoxPlugin : public ToolButtonProvider
 {
     Q_OBJECT
 public:

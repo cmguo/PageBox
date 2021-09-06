@@ -5,16 +5,12 @@
 #include "pagenumberwidget.h"
 #include "qpropertybinding.h"
 #include "pageanimcanvas.h"
-
-#include <guidehelper.h>
+#include "pagesource.h"
 
 #include <data/resourcecache.h>
 #include <core/resourcerecord.h>
 #include <core/toolbutton.h>
 #include <views/pageswitchevent.h>
-
-#include <Windows/Controls/inkcanvas.h>
-#include <Windows/Controls/inkevents.h>
 
 #include <QColor>
 #include <QPen>
@@ -186,6 +182,13 @@ void PageBoxDocItem::setItems(QAbstractItemModel * model)
 void PageBoxDocItem::setItemBindings(QPropertyBindings * bindings)
 {
     itemBindings_ = bindings;
+}
+
+void PageBoxDocItem::setPageSource(PageSource *source)
+{
+    itemBindings_ = source->itemBinding();
+    pageSize_ = source->pageSize();
+    setItems(source->items());
 }
 
 void PageBoxDocItem::reset()
@@ -398,8 +401,6 @@ int PageBoxDocItem::adjustPageIndex(int page, bool neighbor)
 
 void PageBoxDocItem::switchPage(int page, bool anim)
 {
-    bool guided = GuideHelper::sendGuideEvent(GestureType::TurnPage);
-    if (guided) return;
     if (!model_ || page == curPage_)
         return;
     if (page < 0) {

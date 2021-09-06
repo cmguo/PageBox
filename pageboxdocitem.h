@@ -1,7 +1,7 @@
 #ifndef PAGEBOXDOCITEM_H
 #define PAGEBOXDOCITEM_H
 
-#include "TeachingTools_global.h"
+#include "PageBox_global.h"
 
 #include <core/toolbuttonprovider.h>
 
@@ -14,8 +14,9 @@ class PageBoxPageItem;
 class PageNumberWidget;
 class ResourceCache;
 class PageAnimCanvas;
+class PageSource;
 
-class TEACHINGTOOLS_EXPORT PageBoxDocItem : public ToolButtonProvider, public QGraphicsRectItem
+class PAGEBOX_EXPORT PageBoxDocItem : public ToolButtonProvider, public QGraphicsRectItem
 {
     Q_OBJECT
 public:
@@ -91,6 +92,8 @@ public:
     void setItems(QAbstractItemModel * model);
 
     void setItemBindings(QPropertyBindings * bindings);
+
+    void setPageSource(PageSource * source);
 
     void reset();
 

@@ -1,8 +1,9 @@
 #ifndef PAGENOWIDGET_H
 #define PAGENOWIDGET_H
 
+#include "PageBox_global.h"
+
 #include <QWidget>
-#include "TeachingTools_global.h"
 
 class ToolButton;
 class ResourcePage;
@@ -10,7 +11,7 @@ class ResourcePage;
 class QPushButton;
 class QLabel;
 
-class TEACHINGTOOLS_EXPORT PageNumberWidget : public QWidget
+class PAGEBOX_EXPORT PageNumberWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -1,11 +1,13 @@
 #ifndef PAGEBOXTOOLBAR_H
 #define PAGEBOXTOOLBAR_H
 
+#include "PageBox_global.h"
+
 #include <views/toolbarwidget.h>
 
 class PageNumberWidget;
 
-class PageBoxToolBar : public ToolbarWidget
+class PAGEBOX_EXPORT PageBoxToolBar : public ToolbarWidget
 {
     Q_OBJECT
 public:

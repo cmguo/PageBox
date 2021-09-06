@@ -4,8 +4,8 @@
 
 #include <QHBoxLayout>
 
-static QssHelper QSS(":/teachingtools/qss/pageboxtoolbar.qss");
-static QssHelper QSS2(":/teachingtools/qss/pageboxpopbar.qss");
+static QssHelper QSS(":/pagebox/qss/pageboxtoolbar.qss");
+static QssHelper QSS2(":/pagebox/qss/pageboxpopbar.qss");
 
 PageBoxToolBar::PageBoxToolBar(QWidget *parent)
     : ToolbarWidget(parent)
