@@ -3,7 +3,7 @@ QT += widgets
 TEMPLATE = lib
 DEFINES += PAGEBOX_LIBRARY
 
-CONFIG += c++11
+CONFIG += c++14
 
 include(../config.pri)
 
