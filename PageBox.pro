@@ -5,6 +5,9 @@ DEFINES += PAGEBOX_LIBRARY
 
 CONFIG += c++14
 
+include($$(applyCommonConfig))
+include($$(applyConanPlugin))
+
 include(../config.pri)
 
 # The following define makes your compiler emit warnings if you use
@@ -50,18 +53,6 @@ unix {
     target.path = /usr/lib
 }
 !isEmpty(target.path): INSTALLS += target
-
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../QtEventBus/release/ -lQtEventBus
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../QtEventBus/debug/ -lQtEventBusd
-else:unix: LIBS += -L$$OUT_PWD/../QtEventBus/ -lQtEventBus
-
-INCLUDEPATH += $$PWD/../QtEventBus
-DEPENDPATH += $$PWD/../QtEventBus
-
-INCLUDEPATH += $$PWD/../QtPromise/src
-
-INCLUDEPATH += $$PWD/../qtpromise/src/qtpromise $$PWD/../qtpromise/include
-#DEPENDPATH += $$PWD/../qtpromise/src/qtpromise
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../ShowBoard/release/ -lShowBoard
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../ShowBoard/debug/ -lShowBoardd
