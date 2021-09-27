@@ -21,32 +21,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SOURCES += \
-    pageanimcanvas.cpp \
-    pagebox.cpp \
-    pageboxdocitem.cpp \
-    pageboxpageitem.cpp \
-    pageboxplugin.cpp \
-    pageboxtoolbar.cpp \
-    pagemodelcontrolwidget.cpp \
-    pagenumberwidget.cpp \
-    pagesource.cpp \
-    qpropertybinding.cpp \
-    qpropertybindings.cpp
+SOURCES +=
 
 HEADERS += \
-    PageBox_global.h \
-    pageanimcanvas.h \
-    pagebox.h \
-    pageboxdocitem.h \
-    pageboxpageitem.h \
-    pageboxplugin.h \
-    pageboxtoolbar.h \
-    pagemodelcontrolwidget.h \
-    pagenumberwidget.h \
-    pagesource.h \
-    qpropertybinding.h \
-    qpropertybindings.h
+    PageBox_global.h
+
+include(pagebox/pagebox.pri)
 
 # Default rules for deployment.
 unix {
